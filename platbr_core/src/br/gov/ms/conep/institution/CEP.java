@@ -15,7 +15,7 @@ public abstract class CEP implements Institution{
 	}
 
 	@Override
-	public void addSubordinatedInstitution(Institution institution) throws InstitutionCantHaveSubordinatedException {
-		throw new CEPCantHaveSubordinatedInstitutions();
+	public void addSubordinatedInstitution(Institution institution) throws InstitutionCannotHaveSubordinatesException {
+		throw new CEPCannotHaveSubordinatedInstitutions();
 	}	
 }

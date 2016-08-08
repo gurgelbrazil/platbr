@@ -1,7 +1,15 @@
 package br.gov.ms.conep.localization;
 
 import java.io.Serializable;
-import javax.persistence.*;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
 
 /**
  * Entity implementation class for Entity: AddressBean
@@ -9,7 +17,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "TB_ADDRESS")
-public class AddressBean implements Serializable, Address {
+public class AddressBean implements Serializable, Address  {
 	
 	@Id //signifies the primary key
     @Column(name = "CO_SEQ_ADDRESS", nullable = false)

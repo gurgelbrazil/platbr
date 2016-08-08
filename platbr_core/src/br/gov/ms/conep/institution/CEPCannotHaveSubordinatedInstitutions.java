@@ -1,12 +1,10 @@
 package br.gov.ms.conep.institution;
 
-import java.awt.SystemColor;
-
-public class CEPCantHaveSubordinatedInstitutions extends InstitutionCantHaveSubordinatedException {
+public class CEPCannotHaveSubordinatedInstitutions extends InstitutionCannotHaveSubordinatesException {
 	
 	private static String property = System.getProperty("#TEXT1");
 	
-	public CEPCantHaveSubordinatedInstitutions() {
+	public CEPCannotHaveSubordinatedInstitutions() {
 		super(property);
 	}
 }

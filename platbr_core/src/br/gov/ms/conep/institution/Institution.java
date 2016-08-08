@@ -1,9 +1,9 @@
 package br.gov.ms.conep.institution;
 
-import br.gov.ms.conep.localization.Localization;
+import br.gov.ms.conep.localization.Localizable;
 
-public interface Institution extends Localization{
+public interface Institution extends Localizable{
 	public Institution getSubordinatedInstitution();
 	public Institution getParent();
-	public void  addSubordinatedInstitution(Institution institution) throws InstitutionCantHaveSubordinatedException;
+	public void  addSubordinatedInstitution(Institution institution) throws InstitutionCannotHaveSubordinatesException;
 }

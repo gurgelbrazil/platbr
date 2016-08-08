@@ -2,8 +2,16 @@
 <persistence version="2.1" 
 			xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-	<persistence-unit name="platbr_corebeans">
-		<class>br.gov.ms.conep.localization.AddressBean</class>
-		<class>br.gov.ms.conep.user.UserBean</class>
+
+	<persistence-unit name="platbr_corebeans">	
+		<provider></provider>
+	     <jta-data-source>java:/DefaultDS</jta-data-source>
+	     <class>br.gov.ms.conep.localization.AddressBean</class>
+	     <class>br.gov.ms.conep.user.UserBean</class>
+	     <properties>
+    		<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />
+    		<property name="hibernate.default_schema" value="DBPLATAFORMABR2"/>                
+	        <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+	    </properties>	
 	</persistence-unit>
 </persistence>

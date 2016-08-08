@@ -1,18 +1,24 @@
 package br.gov.ms.conep.user;
 
+import java.io.Serializable;
+import java.util.Date;
+import java.util.Map;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
 import br.gov.ms.conep.institution.Institution;
 import br.gov.ms.conep.localization.Address;
 import br.gov.ms.conep.localization.AddressBean;
 import br.gov.ms.conep.localization.PhoneNumber;
-
-import java.io.Serializable;
-import java.lang.Long;
-import java.lang.String;
-import java.util.Collection;
-import java.util.Date;
-import java.util.Map;
-
-import javax.persistence.*;
 
 /**
  * Entity implementation class for Entity: UserBean
